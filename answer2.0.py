@@ -11,12 +11,12 @@ class strong_country(object):
         self.option = webdriver.ChromeOptions()
 
         self.option.add_argument(
-            r"user-data-dir=F:\Chrome\User Data")  # 加载前面获取的 个人资料路径
+            r"user-data-dir=D:\Chrome\User Data")  # 加载前面获取的 个人资料路径
 
         self.option.add_experimental_option('excludeSwitches', ['enable-automation'])
 
         self.driver = webdriver.Chrome(options=self.option,
-                                       executable_path=r"F:\Chrome\Application"r"\chromedriver")
+                                       executable_path=r"D:\Chrome\Application"r"\chromedriver")
 
     def solve(self):
         self.num = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div/div[3]/div[2]/span').text
@@ -397,7 +397,7 @@ class strong_country(object):
         self.driver.quit()
 
         self.driver = webdriver.Chrome(options=self.option,
-                                       executable_path=r"F:\Chrome\Application"r"\chromedriver")
+                                       executable_path=r"D:\Chrome\Application"r"\chromedriver")
 
         self.driver.get("https://pc.xuexi.cn/points/exam-index.html")
 
